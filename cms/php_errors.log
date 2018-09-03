@@ -3,3 +3,5 @@
 [01-Sep-2018 15:27:21 UTC] PHP Fatal error:  Cannot use empty array elements in arrays in /home/ubuntu/workspace/cms/app/Http/Controllers/SearchsController.php on line 34
 [01-Sep-2018 16:10:39 UTC] PHP Fatal error:  Cannot use [] for reading in /home/ubuntu/workspace/cms/app/Http/Controllers/SearchsController.php on line 31
 [03-Sep-2018 11:18:13 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/ubuntu/workspace/cms/vendor/laravel/framework/src/Illuminate/Support/Str.php on line 102
+[03-Sep-2018 12:02:13 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/ubuntu/workspace/cms/storage/framework/views/999a9ff67f1a045dd51fa4c358c28f3fe9ebb65c.php on line 8
+[03-Sep-2018 12:06:26 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/ubuntu/workspace/cms/storage/framework/views/999a9ff67f1a045dd51fa4c358c28f3fe9ebb65c.php on line 8

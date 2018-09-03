@@ -19,12 +19,6 @@ class SearchsController extends Controller
         return view('searchs.searchs', ['search'=>$search]);
     }
     
-    public function video(Request $request){
-        $search = 2;
-        $video_name = $request->video_name;
-        $video = Video::where('video_name', 'like', '%'.$video_name.'%')->get();
-        return view('searchs.searchs', ['video'=>$video], ['search'=>$search]);
-    }
     
     public function creator(Request $request){
         $search = 1;
@@ -35,21 +29,25 @@ class SearchsController extends Controller
             $space = preg_replace('/\s+/', ' ', $space);
             $space = trim($space);
             $array = explode(" ", $space);
-        // dd($array);
-            
             
             //この書き方はor検索 AND検索にすべきか
+            //現在の状況
             for($i=0; $i<count($array); $i++){
                     $search_creator = Creator::where('creator_name', 'like', '%'.$array[$i].'%')->get();
                     for($p=0; $p<count($search_creator); $p++){
                         array_push($creator, $search_creator[$p]);
                     }
-                    
             }
+            
         }
-        dd($creator);
-        // return view('searchs.searchs', ['creator'=>$creator, 'search'=>$search, 'creator_name'=>$creator_name]);
+        return view('searchs.searchs', ['creator'=>$creator, 'search'=>$search, 'creator_name'=>$creator_name]);
     }    
     
+    public function video(Request $request){
+        $search = 2;
+        $video_name = $request->video_name;
+        $video = Video::where('video_name', 'like', '%'.$video_name.'%')->get();
+        return view('searchs.searchs', ['video'=>$video], ['search'=>$search]);
+    }
     
 }
