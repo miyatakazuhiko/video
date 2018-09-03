@@ -11,6 +11,7 @@ class CreateVideosTable extends Migration
     {
         Schema::create('videos', function (Blueprint $table) {
             $table->increments('video_id');
+            $table->string('creator_id');
             $table->string('video_file');
             $table->string('video_name');
             $table->string('video_url');
@@ -18,6 +19,7 @@ class CreateVideosTable extends Migration
             $table->string('thumbnail');//サムネイル
             $table->string('description');//動画説明
             $table->string('supplement');//動画補足
+            $table->integer('void')->default(0);
             $table->timestamps();
         });
     }

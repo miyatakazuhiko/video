@@ -4,18 +4,21 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
+use App\Creator;
 
 class User extends Authenticatable
 {
     use Notifiable;
 
     /**
-     * The attributes that are mass assignable.
+         * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'firstname', 'lastname', 'email', 'password', 'postal_code',
+        'address', 'tel', 'organization',
     ];
 
     /**
@@ -26,4 +29,13 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    
+    //1:1 クリエイター登録情報と紐付けCreator::classどっち？
+    public function creator_id()
+    {
+        return $this->hasOne('App\Creator', 'creator_id', 'id');
+        //第二引数が引っ張ってきたいやつ。
+    }
+    
+    
 }

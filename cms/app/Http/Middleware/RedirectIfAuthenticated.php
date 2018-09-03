@@ -19,6 +19,8 @@ class RedirectIfAuthenticated
     {
         if (Auth::guard($guard)->check()) {
             return redirect('/home');
+            //ここでログイン後のリダイレクト先を指定できる。
+            //LoginControllerを編集しても指定できる。
         }
 
         return $next($request);

@@ -14,4 +14,6 @@ class UsersController extends Controller
 
         return view('users.users', ['users' => $users]);
     }
+    
+    
 }

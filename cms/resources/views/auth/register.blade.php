@@ -10,18 +10,18 @@
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
-
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Name</label>
-
+                        <!--入力ｴﾗｰなどのやつは一度消している。-->
+                        <div class="form-group">
+                            <label for="firstname" class="col-md-4 control-label">First Name</label>
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
+                                <input id="firstname" type="text" class="form-control" name="firstname" value="{{ old('firstname') }}" required autofocus>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastname" class="col-md-4 control-label">Last Name</label>
+                            <div class="col-md-6">
+                                <input id="lastname" type="text" class="form-control" name="lastname" value="{{ old('lastname') }}" required autofocus>
                             </div>
                         </div>
 
@@ -60,6 +60,35 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <label for="postal_code" class="col-md-4 control-label">Postal_code</label>
+                            <div class="col-md-6">
+                                <input id="postal_code" type="text" class="form-control" name="postal_code" value="{{ old('postal_code') }}" required autofocus>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address" class="col-md-4 control-label">Address</label>
+                            <div class="col-md-6">
+                                <input id="address" type="text" class="form-control" name="address" value="{{ old('address') }}" required autofocus>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tel" class="col-md-4 control-label">Tel</label>
+                            <div class="col-md-6">
+                                <input id="tel" type="text" class="form-control" name="tel" value="{{ old('tel') }}" required autofocus>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="organization" class="col-md-4 control-label">Organization</label>
+                            <div class="col-md-6">
+                                <input id="organization" type="text" class="form-control" name="organization" value="{{ old('organization') }}" required autofocus>
+                            </div>
+                        </div>
+
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">

@@ -10,6 +10,7 @@ class CreateCreatorsTable extends Migration
     {
         Schema::create('creators', function (Blueprint $table) {
             $table->increments('creator_id');
+            $table->string('user_id');
             $table->string('creator_name');
             $table->string('birthday');
             $table->string('gender');

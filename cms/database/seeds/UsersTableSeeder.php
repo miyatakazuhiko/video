@@ -8,10 +8,10 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         $param = [
-                'firstname' => 'ミヤタ',
-                'lastname' => 'カズ',
-                'email' => 'pudding@co.jp',
-                'password' => '123123',
+                'firstname' => 'さくら',
+                'lastname' => 'キョウコ',
+                'email' => 'suzunaridepon@hotmail.co.jp',
+                'password' => bcrypt('123123'),
                 'postal_code' => '1111111',
                 'address' => '新宿区下落合',
                 'tel' => '00011114444',
@@ -23,7 +23,7 @@ class UsersTableSeeder extends Seeder
                 'firstname' => 'サクラ',
                 'lastname' => 'キョウコ',
                 'email' => 'sakura@co.jp',
-                'password' => '456456',
+                'password' => bcrypt('456456'),
                 'postal_code' => '2221111',
                 'address' => '見滝原',
                 'tel' => '55511114444',
