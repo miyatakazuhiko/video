@@ -21,7 +21,6 @@ class VideosController extends Controller
         return view('videos.videos_view',['video_info'=>$videos_info,]);                
     }
     
-
     public function video_add(Request $request){
         $videos = new Video;
         $videos->video_file =$request->video_file;

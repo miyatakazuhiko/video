@@ -19,7 +19,7 @@
     </table>
     @endforeach
     <!--別ページ-->
-    <a href="/mypage_user"><button>ユーザー情報編集</button></a>
+    <a href="/mypage_user_edit"><button>ユーザー情報編集</button></a>
     <li>---------<a href="/">口座登録/編集</a></li>
     <!------------>
 </div><br>
@@ -58,7 +58,7 @@
     </table>
     @endforeach
     <!--別ページ-->
-    <a href="/mypage_creator"><button>クリエイター情報編集</button></a>
+    <a href="/mypage_creator_edit"><button>クリエイター情報編集</button></a>
     <li><a href="/">売り上げ管理画面</a></li>
     <!------------>
 </div><br>

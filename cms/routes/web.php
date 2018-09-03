@@ -54,14 +54,17 @@ Route::post('/search_video', 'SearchsController@video');
 //マイページ
 Route::get('/mypage', 'MypagesController@index');
 
-    //ユーザー情報
-    Route::get('/mypage_user', 'MypagesController@user');
+    //ユーザー情報更新画面
+    Route::get('/mypage_user_edit', 'MypagesController@user_edit');
 
     //ユーザー情報更新処理
-    Route::post('/mypage_user_edit', 'MypagesController@user_edit');
+    Route::post('/mypage_user_update', 'MypagesController@user_update');
     
-    //クリエイター情報
-    Route::get('/mypage_creator', 'MypagesController@creator');
+    //クリエイター情報更新画面
+    Route::get('/mypage_creator_edit', 'MypagesController@creator_edit');
+    
+    //クリエイター情報更新処理
+    Route::post('/mypage_creator_update', 'MypagesController@creator_update');
 
 //ログイン
 Auth::routes();
